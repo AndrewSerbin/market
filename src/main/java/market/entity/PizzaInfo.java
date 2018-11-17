@@ -1,6 +1,7 @@
 package market.entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,8 +12,9 @@ import java.util.Map;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Data
-public class Pizza {
+public class PizzaInfo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -20,8 +22,11 @@ public class Pizza {
 
     private String name;
 
-    @ElementCollection(targetClass=String.class)
+    @ElementCollection
     private List<String> ingridients;
 
-//    private List<Map<String, String>> count;
+    @ElementCollection
+    private List<PricePerWeight> pricePerWeight;
+
+    private String imgUrl;
 }

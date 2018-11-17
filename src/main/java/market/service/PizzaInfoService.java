@@ -1,14 +1,14 @@
 package market.service;
 
 import lombok.experimental.Delegate;
-import market.repository.PizzaRepository;
+import market.repository.PizzaInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PizzaService {
+public class PizzaInfoService {
 
     @Autowired
     @Delegate
-    private PizzaRepository pizzaRepository;
+    private PizzaInfoRepository pizzaInfoRepository;
 }
