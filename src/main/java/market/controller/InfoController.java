@@ -30,7 +30,7 @@ public class InfoController {
         List<PizzaInfo> pizzaInfos = new ArrayList<>();
 
         pizzaInfos.add(PizzaInfo.builder()
-                .name("Пица Пеперони с  томатами")
+                .name("Пицца Пеперони с  томатами")
                 .ingridients(Arrays.asList("моцарелла", "пеперони", "помидоры","соус барбекю"))
                 .pricePerWeight(Arrays.asList(
                         new PricePerWeight(22, 90),
@@ -41,7 +41,7 @@ public class InfoController {
                 .build());
 
         pizzaInfos.add(PizzaInfo.builder()
-                .name("Пица Техас")
+                .name("Пицца Техас")
                 .ingridients(Arrays.asList("кукуруза", "моцарелла", "лук", "грибы", "колбаски баварские", "соус барбекю"))
                 .pricePerWeight(Arrays.asList(
                         new PricePerWeight(22, 80),
@@ -52,7 +52,7 @@ public class InfoController {
                 .build());
 
         pizzaInfos.add(PizzaInfo.builder()
-                .name("Пица Гавайская")
+                .name("Пицца Гавайская")
                 .ingridients(Arrays.asList("курица", "моцарелла", "ананас", "фирменный соус"))
                 .pricePerWeight(Arrays.asList(
                         new PricePerWeight(22, 109),
@@ -63,7 +63,7 @@ public class InfoController {
                 .build());
 
         pizzaInfos.add(PizzaInfo.builder()
-                .name("Пица Прованс")
+                .name("Пицца Прованс")
                 .ingridients(Arrays.asList("моцарелла", "бергадер блю", "шинка", "пеперони", "помидоры", "соус альфредо"))
                 .pricePerWeight(Arrays.asList(
                         new PricePerWeight(22, 129),
@@ -74,7 +74,7 @@ public class InfoController {
                 .build());
 
         pizzaInfos.add(PizzaInfo.builder()
-                .name("Пица Пеперони блюз")
+                .name("Пицца Пеперони блюз")
                 .ingridients(Arrays.asList("моцарелла", "бергадер блю", "пеперони",  "соус альфредо"))
                 .pricePerWeight(Arrays.asList(
                         new PricePerWeight(22, 109),
@@ -85,7 +85,7 @@ public class InfoController {
                 .build());
 
         pizzaInfos.add(PizzaInfo.builder()
-                .name("Пица Пять сыров")
+                .name("Пицца Пять сыров")
                 .ingridients(Arrays.asList("фета", "моцарелла", "пармезан",  "бергадер блю", "соус альфредо" , "чедер"))
                 .pricePerWeight(Arrays.asList(
                         new PricePerWeight(22, 164),
