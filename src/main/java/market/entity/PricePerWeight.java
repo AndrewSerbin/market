@@ -14,7 +14,7 @@ import javax.persistence.Embeddable;
 @Builder
 public class PricePerWeight {
 
-    private long size;
+    private Long size;
 
-    private long price;
+    private Double price;
 }

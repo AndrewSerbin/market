@@ -26,5 +26,5 @@ public class Purchase {
     @ElementCollection(targetClass=PricePerWeight.class)
     private Map<Long, PricePerWeight> pizzas;
 
-    private Long totalSum;
+    private Double totalSum;
 }
