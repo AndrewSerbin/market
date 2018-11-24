@@ -4,29 +4,27 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import javax.persistence.Id;
 
 import javax.persistence.*;
-import javax.persistence.Id;
-import java.util.List;
+import java.util.Map;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @Data
-public class PizzaInfo {
+public class Purchase {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String name;
+    @ManyToOne(cascade=CascadeType.ALL)
+    private User user;
 
-    @ElementCollection
-    private List<String> ingridients;
+    @ElementCollection(targetClass=PricePerWeight.class)
+    private Map<Long, PricePerWeight> pizzas;
 
-    @ElementCollection
-    private List<PricePerWeight> pricePerWeight;
-
-    private String imgUrl;
+    private Long totalSum;
 }

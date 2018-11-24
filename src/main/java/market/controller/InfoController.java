@@ -1,7 +1,10 @@
 package market.controller;
 
+import market.entity.Id;
+import market.entity.Purchase;
 import market.entity.PizzaInfo;
 import market.entity.PricePerWeight;
+import market.service.PurchaseService;
 import market.service.PizzaInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +18,8 @@ public class InfoController {
 
     @Autowired
     private PizzaInfoService pizzaInfoService;
+    @Autowired
+    private PurchaseService purchaseService;
 
     @GetMapping(value = "/health")
     public String health() {
@@ -103,29 +108,10 @@ public class InfoController {
         return pizzaInfoService.findAll();
     }
 
-//    @GetMapping(value = "/books/{id}", produces = "application/json")
-//    public PizzaInfo findOne(@PathVariable Long id) {
-//        return pizzaInfoService.findOne(id);
-//    }
-//
-//    @PostMapping(value = "/books", consumes = "application/json")
-//    public void save(@RequestBody PizzaInfo book) {
-//        pizzaInfoService.save(book);
-//    }
-//
-//    @PutMapping(value = "/books/{id}", consumes = "application/json")
-//    public void update(@RequestBody PizzaInfo book, @PathVariable Long id) {
-//        if (pizzaInfoService.exists(id)) {
-//            book.setId(id);
-//            pizzaInfoService.save(book);
-//        }
-//    }
-//
-//    @DeleteMapping(value = "/books/{id}")
-//    @ResponseStatus(HttpStatus.NO_CONTENT)
-//    public void update(@PathVariable Long id) {
-//        if (pizzaInfoService.exists(id)) {
-//            pizzaInfoService.delete(id);
-//        }
-//    }
+    @PostMapping(value = "/purchases", consumes = "application/json", produces = "application/json")
+    public Id save(@RequestBody Purchase purchase) {
+        purchaseService.save(purchase);
+        System.out.println(purchase);
+        return new Id(purchase.getId());
+    }
 }

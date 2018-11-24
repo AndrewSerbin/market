@@ -15,5 +15,6 @@ import javax.persistence.Embeddable;
 public class PricePerWeight {
 
     private long size;
+
     private long price;
 }

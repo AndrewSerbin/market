@@ -4,17 +4,16 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import javax.persistence.Id;
 
 import javax.persistence.*;
-import javax.persistence.Id;
-import java.util.List;
 
 @Entity
-@NoArgsConstructor
 @AllArgsConstructor
-@Builder
+@NoArgsConstructor
 @Data
-public class PizzaInfo {
+@Builder
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,11 +21,5 @@ public class PizzaInfo {
 
     private String name;
 
-    @ElementCollection
-    private List<String> ingridients;
-
-    @ElementCollection
-    private List<PricePerWeight> pricePerWeight;
-
-    private String imgUrl;
+    private String phone;
 }
